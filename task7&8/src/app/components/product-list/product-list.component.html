@@ -1,0 +1,51 @@
+<div class="container mx-auto px-4">
+  <h1 class="text-3xl font-bold mb-10 text-white">All Available Products</h1>
+
+  <div class="mt-8 flex justify-center text-white mb-10">
+    <button
+      (click)="onPageChange(currentPage - 1)"
+      [disabled]="currentPage === 1"
+      class="mx-1 px-3 py-1 rounded bg-indigo-700"
+    >
+      Prev
+    </button>
+  
+    <!-- <button
+      *ngFor="let page of getTotalPages(); let i = index"
+      (click)="onPageChange(page)"
+      [class.bg-blue-500]="currentPage === page"
+      [class.text-white]="currentPage === page"
+      class="mx-1 px-3 py-1 rounded"
+    >
+      {{ page }}
+    </button> -->
+  
+    <button
+      (click)="onPageChange(currentPage + 1)"
+      [disabled]="currentPage === getTotalPages().length"
+      class="mx-1 px-3 py-1 rounded bg-indigo-700"
+    >
+      Next
+    </button>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let product of products" class="bg-pink-300 rounded-lg p-4">
+      <img
+        [src]="product.thumbnail"
+        [alt]="product.title"
+        class="w-full h-40 object-cover mb-4"
+      />
+      <h2 class="text-xl text-gray-900 font-semibold mb-2">
+        {{ product.title }}
+      </h2>
+      <p class="text-gray-600 mb-2">{{ product.description }}</p>
+      <p class="text-lg font-bold text-teal-600">${{ product.price }}</p>
+      <a
+        [routerLink]="['/product', product.id]"
+        class="mt-4 inline-block bg-indigo-700 text-white px-4 py-2 rounded"
+        >View Details</a
+      >
+    </div>
+  </div>
+</div>

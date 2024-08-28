@@ -1,0 +1,17 @@
+<div *ngIf="product" class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4 text-center text-white">{{ product.title }}</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-pink-300 rounded-md">
+    <div>
+      <img [src]="product.thumbnail" [alt]="product.title" class="w-full h-auto rounded-lg">
+    </div>
+    <div>
+      <p class="text-xl mb-2 mt-20">{{ product.description }}</p>
+      <p class="text-2xl font-bold text-teal-600 mb-4">${{ product.price }}</p>
+      <p class="mb-2"><span class="font-semibold">Brand:</span> {{ product.brand }}</p>
+      <p class="mb-2"><span class="font-semibold">Category:</span> {{ product.category }}</p>
+      <p class="mb-2"><span class="font-semibold">Rating:</span> {{ product.rating }}/5</p>
+      <p class="mb-2"><span class="font-semibold">Stock:</span> {{ product.stock }}</p>
+      <button class="mt-4 bg-indigo-700 text-white px-6 py-2 rounded">Add to Cart</button>
+    </div>
+  </div>
+</div>

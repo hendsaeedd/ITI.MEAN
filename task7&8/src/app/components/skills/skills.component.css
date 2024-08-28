@@ -1,0 +1,48 @@
+.skills-container {
+  background-color: #333;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.skills-description {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.skills-focus {
+  text-align: left;
+  width: 30%;
+}
+
+.skills-focus h3 {
+  font-size: 1.5em;
+}
+
+.divider {
+  width: 50%;
+  border: 1px solid #fff;
+  margin: 10px 0;
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+}
+
+.focus-list li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
