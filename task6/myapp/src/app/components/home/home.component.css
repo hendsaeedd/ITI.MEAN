@@ -1,0 +1,33 @@
+
+  
+  .profile-content {
+    margin-left: 50px;
+    color: white;
+  }
+  
+  .profile-name {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .profile-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .contact-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
